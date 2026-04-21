@@ -1,3 +1,4 @@
+
 class User:
     def __init__(self, name, email):
         self.name = name
@@ -15,6 +16,12 @@ class User:
             self.accounts.remove(account)
             return True
         return False
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "email": self.email,
+            "accounts": [account.to_dict() for account in self.accounts]
+        }
 
     def __str__(self):
         return f"User(name={self.name}, email={self.email}, Accounts={len(self.accounts)})"

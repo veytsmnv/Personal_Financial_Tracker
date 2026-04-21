@@ -10,3 +10,6 @@ class Transaction:
             'recipient': self.recipient,
             'amount': self.amount
         }
+    
+    def __str__(self):
+        return f"Transaction(sender={self.sender}, recipient={self.recipient}, amount={self.amount})"

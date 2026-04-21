@@ -1,0 +1,22 @@
+[
+    {
+        "name": "John",
+        "email": "john@email.com",
+        "accounts": [
+            {
+                "type": "checking",
+                "account_id": "001",
+                "owner": "John",
+                "balance": 550,
+                "overdraft_limit": 100
+            },
+            {
+                "type": "savings",
+                "account_id": "002",
+                "owner": "John",
+                "balance": 1081.5,
+                "interest_rate": 3
+            }
+        ]
+    }
+]
