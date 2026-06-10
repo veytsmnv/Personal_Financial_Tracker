@@ -1,0 +1,28 @@
+---
+version: 2
+plan:
+  project-key: PROJ
+  key: BUILD
+  name: My Build Plan
+
+stages:
+  - Build:
+    - Build Job
+  - Test:
+    - Test Job
+
+Build Job:
+  tasks:
+    - checkout: {}
+    - script:
+        - npm ci
+        - npm run build
+
+Test Job:
+  tasks:
+    - script:
+        - npm test
+
+triggers:
+  - polling:
+      period: '30'
